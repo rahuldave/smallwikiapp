@@ -2,6 +2,12 @@ version = 1
 revision = 3
 requires-python = ">=3.11"
 
+[manifest]
+members = [
+    "wikiapp",
+    "wikirandom",
+]
+
 [[package]]
 name = "annotated-types"
 version = "0.8.0"
@@ -983,4 +989,19 @@ test = [
     { name = "pytest", specifier = ">=9.1.1" },
     { name = "pytest-cov", specifier = ">=7.1.0" },
     { name = "pytest-mock", specifier = ">=3.16.0" },
+]
+
+[[package]]
+name = "wikirandom"
+version = "0.1.0"
+source = { editable = "packages/wikirandom" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "requests" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "pydantic", specifier = ">=2.14.1" },
+    { name = "requests", specifier = ">=2.34.2" },
 ]
