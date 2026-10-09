@@ -24,6 +24,11 @@ build-backend = "uv_build"
 # uv sync and uv run install every dependency group, not only dev
 default-groups = "all"
 
+[tool.uv.workspace]
+members = [
+    "packages/wikirandom",
+]
+
 [dependency-groups]
 docs = [
     "smalldocs>=0.1.5",
