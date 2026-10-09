@@ -1,0 +1,20 @@
+# What every commit must pass. `just hook` installs it as a git hook.
+#
+# The project's own checks are one hook that runs `just check`, so the hook and the terminal run the
+# same thing. The hooks before it guard against files that should never be committed.
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-yaml
+      - id: check-added-large-files
+        args: [--maxkb=1000]
+      - id: check-merge-conflict
+  - repo: local
+    hooks:
+      - id: check
+        name: just check
+        entry: just check
+        language: system
+        pass_filenames: false
+        always_run: true
