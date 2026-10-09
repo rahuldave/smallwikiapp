@@ -25,6 +25,7 @@ default-groups = "all"
 
 [dependency-groups]
 lint = [
+    "pre-commit>=4.7.0",
     "ruff>=0.17.0",
     "validate-pyproject>=0.26",
 ]
