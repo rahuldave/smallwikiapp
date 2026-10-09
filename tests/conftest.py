@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.fixture
 def mock_requests_get(mocker):
     mock = mocker.patch("requests.get")
