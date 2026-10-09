@@ -1,6 +1,7 @@
 from typing import Any
 
 import requests
+from pydantic import BaseModel
 
 API_URL = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
 USER_AGENT = "wikiapp/0.1.0 (https://github.com/rahuldave/smallwikiapp)"
@@ -8,6 +9,13 @@ USER_AGENT = "wikiapp/0.1.0 (https://github.com/rahuldave/smallwikiapp)"
 
 class WikipediaError(Exception):
     """Wikipedia could not give a page."""
+
+
+class Page(BaseModel):
+    """A page of Wikipedia: its title and the summary of its text."""
+
+    title: str
+    extract: str
 
 
 def random_page(language: str = "en") -> dict[str, Any]:
