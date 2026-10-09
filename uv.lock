@@ -952,6 +952,7 @@ dependencies = [
     { name = "click" },
     { name = "pydantic" },
     { name = "requests" },
+    { name = "wikirandom" },
 ]
 
 [package.dev-dependencies]
@@ -975,6 +976,7 @@ requires-dist = [
     { name = "click", specifier = ">=8.5.0" },
     { name = "pydantic", specifier = ">=2.14.1" },
     { name = "requests", specifier = ">=2.34.2" },
+    { name = "wikirandom", editable = "packages/wikirandom" },
 ]
 
 [package.metadata.requires-dev]

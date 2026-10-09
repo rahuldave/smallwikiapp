@@ -11,6 +11,7 @@ dependencies = [
     "click>=8.5.0",
     "pydantic>=2.14.1",
     "requests>=2.34.2",
+    "wikirandom",
 ]
 
 [project.scripts]
@@ -28,6 +29,9 @@ default-groups = "all"
 members = [
     "packages/wikirandom",
 ]
+
+[tool.uv.sources]
+wikirandom = { workspace = true }
 
 [dependency-groups]
 docs = [
