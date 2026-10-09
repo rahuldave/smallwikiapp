@@ -1,5 +1,6 @@
 """wikirandom: a random page of Wikipedia, in any language, from its REST API."""
 
+import importlib.metadata
 import re
 
 import requests
@@ -7,7 +8,8 @@ from pydantic import BaseModel, ValidationError
 
 API_URL = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
 LANGUAGE = re.compile(r"[a-z]+(-[a-z]+)*")  # en, fr, simple, zh-yue: letters and hyphens
-USER_AGENT = "wikirandom/0.1.0 (https://github.com/rahuldave/smallwikiapp)"
+VERSION = importlib.metadata.version("wikirandom")
+USER_AGENT = f"wikirandom/{VERSION} (https://github.com/rahuldave/smallwikiapp)"
 
 
 class WikipediaError(Exception):
