@@ -1,0 +1,5 @@
+# The settings of smalldocs. `api` is the reference, made from the code of the packages
+api:
+  packages: [wikiapp]
+  source: https://github.com/rahuldave/smallwikiapp/blob/main  # each entry links to its line here
+  check: ["tests/**/*.py"]  # the tests are held to the same rule as the package
