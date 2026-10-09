@@ -950,8 +950,6 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "click" },
-    { name = "pydantic" },
-    { name = "requests" },
     { name = "wikirandom" },
 ]
 
@@ -974,8 +972,6 @@ test = [
 [package.metadata]
 requires-dist = [
     { name = "click", specifier = ">=8.5.0" },
-    { name = "pydantic", specifier = ">=2.14.1" },
-    { name = "requests", specifier = ">=2.34.2" },
     { name = "wikirandom", editable = "packages/wikirandom" },
 ]
 
