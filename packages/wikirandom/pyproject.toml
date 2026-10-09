@@ -3,11 +3,17 @@ name = "wikirandom"
 version = "0.1.0"
 description = "A random page of Wikipedia, in any language"
 readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Rahul Dave" }]
 requires-python = ">=3.11"
 dependencies = [
     "pydantic>=2.14.1",
     "requests>=2.34.2",
 ]
+
+[project.urls]
+Repository = "https://github.com/rahuldave/smallwikiapp"
 
 [build-system]
 requires = ["uv_build>=0.12.13,<0.13.0"]
