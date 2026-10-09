@@ -1,4 +1,4 @@
-"""Wikipedia's REST API: a random page."""
+"""wikirandom: a random page of Wikipedia, in any language, from its REST API."""
 
 import re
 
@@ -7,7 +7,7 @@ from pydantic import BaseModel, ValidationError
 
 API_URL = "https://{language}.wikipedia.org/api/rest_v1/page/random/summary"
 LANGUAGE = re.compile(r"[a-z]+(-[a-z]+)*")  # en, fr, simple, zh-yue: letters and hyphens
-USER_AGENT = "wikiapp/0.1.0 (https://github.com/rahuldave/smallwikiapp)"
+USER_AGENT = "wikirandom/0.1.0 (https://github.com/rahuldave/smallwikiapp)"
 
 
 class WikipediaError(Exception):
