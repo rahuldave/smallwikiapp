@@ -24,6 +24,9 @@ build-backend = "uv_build"
 default-groups = "all"
 
 [dependency-groups]
+lint = [
+    "ruff>=0.17.0",
+]
 test = [
     "pytest>=9.1.1",
     "pytest-cov>=7.1.0",
