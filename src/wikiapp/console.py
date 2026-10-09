@@ -5,10 +5,18 @@ import textwrap
 from wikiapp.wikipedia import random_page
 
 @click.command()
+@click.option(
+    "--language",
+    "-l",
+    default="en",
+    help="Gets random page from Wikipedia in given language",
+    metavar="LANG",
+    show_default=True,
+)
 @click.version_option(version=__version__)
-def main() -> None:
+def main(language) -> None:
     """Print the title and summary of a random Wikipedia page."""
-    data = random_page()
+    data = random_page(language=language)
     title = data["title"]
     extract = data["extract"]
     click.secho(title, fg="green")
